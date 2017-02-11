@@ -1,0 +1,304 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12158,        296]
+NotebookOptionsPosition[     11672,        276]
+NotebookOutlinePosition[     12021,        291]
+CellTagsIndexPosition[     11978,        288]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Omega]", "=", "1.25"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l", "=", 
+   RowBox[{"3", 
+    RowBox[{"\[Pi]", "/", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "\[Theta]_", "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ArcTan", "[", 
+       RowBox[{"(", 
+        RowBox[{"\[Theta]", "-", 
+         RowBox[{"l", "/", "3"}]}], ")"}], "]"}], "/", "\[Pi]"}], "+", 
+     RowBox[{"1", "/", "2"}]}], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "\[Theta]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", "l"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6955293872527485`*^9, 3.695529561412797*^9}, {
+   3.695529599084934*^9, 3.6955296360141516`*^9}, {3.69552966917131*^9, 
+   3.695529791945712*^9}, 3.695529992014656*^9, {3.6955304965225644`*^9, 
+   3.6955305277563334`*^9}, 3.695530992553139*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"img", "=", 
+  RowBox[{"Rasterize", "[", 
+   RowBox[{
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ParametricPlot", "[", 
+         RowBox[{
+          RowBox[{"(", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"r", " ", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}], ",", 
+                  RowBox[{"-", 
+                   RowBox[{"Sin", "[", 
+                    RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}], ",", 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}]}], "}"}]}], "}"}], ".", 
+              RowBox[{"(", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\[Theta]", " ", 
+                  RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+                 RowBox[{"\[Theta]", " ", 
+                  RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ")"}]}]}],
+             "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "-", "r"}], ")"}], 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}], ",", 
+                  RowBox[{"-", 
+                   RowBox[{"Sin", "[", 
+                    RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}], ",", 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"2", "\[Pi]", " ", 
+                    RowBox[{"n", "/", "7"}]}], "]"}]}], "}"}]}], "}"}], ".", 
+              RowBox[{"(", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "[", "l", "]"}], "-", 
+                   RowBox[{"\[Tau]", "[", "\[Theta]", "]"}]}], ")"}], 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\[Theta]", "+", " ", "\[Omega]"}], ")"}], " ", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\[Theta]", "+", " ", "\[Omega]"}], ")"}], " ", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}]}], " ", 
+                "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "[", "\[Theta]", "]"}], "-", 
+                   RowBox[{"\[Tau]", "[", "l", "]"}], "+", "1"}], ")"}], 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\[Theta]", " ", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+                   RowBox[{"\[Theta]", " ", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}]}]}], " ",
+                ")"}]}]}]}], "\[IndentingNewLine]", ")"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\[Theta]", ",", "0", ",", "l"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+          RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"l", "+", "\[Omega]"}], ")"}], "/", "l"}], ")"}], 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "l"}], ",", "l"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "l"}], ",", "l"}], "}"}]}], "}"}]}], ")"}]}], 
+          ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Opacity", "[", "1", "]"}], ",", "Black"}], "}"}], 
+            "}"}]}], ",", 
+          RowBox[{"BoundaryStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{"Thin", ",", "Black"}], "}"}], "}"}]}], ",", 
+          RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"PlotPoints", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"100", ",", "2"}], "}"}]}], ",", 
+          RowBox[{"Background", "\[Rule]", "Transparent"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", "0", ",", "6", ",", "1"}], "}"}]}], 
+       "\[IndentingNewLine]", "]"}], ",", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{"Disk", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", "0.9"}], "]"}], "]"}]}], "]"}],
+     ",", 
+    RowBox[{"RasterSize", "\[Rule]", "6000"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", "3000"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.695526172767953*^9, 3.6955263128293447`*^9}, {
+   3.695526372707548*^9, 3.6955263780015917`*^9}, {3.695526605711199*^9, 
+   3.6955266059458227`*^9}, {3.695526876991173*^9, 3.695527060322607*^9}, {
+   3.6955271091765304`*^9, 3.6955271358123503`*^9}, {3.6955271762819214`*^9, 
+   3.6955273245782433`*^9}, {3.6955273564569964`*^9, 
+   3.6955276933423166`*^9}, {3.6955277752340555`*^9, 
+   3.6955280516326013`*^9}, {3.6955280841299725`*^9, 
+   3.6955281993613644`*^9}, {3.6955282315739956`*^9, 3.695528231657217*^9}, {
+   3.6955282724787564`*^9, 3.6955283022800136`*^9}, {3.6955284010686455`*^9, 
+   3.695528414871376*^9}, {3.695528590187471*^9, 3.6955286498962426`*^9}, {
+   3.695528687080114*^9, 3.6955288311040125`*^9}, {3.6955289042024026`*^9, 
+   3.695529206433961*^9}, {3.695529240953772*^9, 3.6955292917929497`*^9}, {
+   3.6955293293578243`*^9, 3.6955293773594174`*^9}, 3.6955297154493647`*^9, {
+   3.6955298057494106`*^9, 3.695529876595807*^9}, {3.6955299454619136`*^9, 
+   3.6955299457115407`*^9}, {3.6955300092495112`*^9, 3.695530108865369*^9}, {
+   3.6955301584424515`*^9, 3.6955301696081324`*^9}, {3.6955301997730293`*^9, 
+   3.695530480629347*^9}, {3.695530512677251*^9, 3.695530516029149*^9}, {
+   3.695530547385533*^9, 3.695530639707999*^9}, {3.6955306760265627`*^9, 
+   3.695530802907902*^9}, {3.6955308431017733`*^9, 3.6955308733792486`*^9}, {
+   3.6955310055050335`*^9, 3.695531005839945*^9}, {3.6955310906965504`*^9, 
+   3.6955310909090853`*^9}, {3.6955311932371845`*^9, 3.695531193314361*^9}, {
+   3.695531256870371*^9, 3.6955312575572076`*^9}, {3.6955315226598234`*^9, 
+   3.6955315236204033`*^9}, {3.6955615169236927`*^9, 3.69556151709517*^9}, {
+   3.695561577106398*^9, 3.6955615848419695`*^9}, {3.6955617100179567`*^9, 
+   3.695561721157542*^9}, {3.6955619147675495`*^9, 3.695561945484213*^9}, 
+   3.695562007757639*^9, 3.6957745328054533`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParametricPlot","exclul",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{FractionBox[\\\"\[Pi]\\\", \\\"2\\\"], \\\"-\\\", RowBox[{\\\"Re\\\", \
+\\\"[\\\", \\\"\[Theta]\\\", \\\"]\\\"}]}], \\\")\\\"}], \\\"-\\\", \
+\\\"0\\\"}], \\\"}\\\"}]\\) must be a list of equalities or real-valued \
+functions.\"",2,5,1,30931987016579593859,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6955615852540584`*^9, 3.695561721579703*^9, {3.695561915433282*^9, 
+   3.6955619459033136`*^9}, 3.6955620117843456`*^9, 3.695774501734235*^9, 
+   3.6957745569727273`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParametricPlot","exclul",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{FractionBox[\\\"\[Pi]\\\", \\\"2\\\"], \\\"-\\\", RowBox[{\\\"Re\\\", \
+\\\"[\\\", \\\"\[Theta]\\\", \\\"]\\\"}]}], \\\")\\\"}], \\\"-\\\", \
+\\\"0\\\"}], \\\"}\\\"}]\\) must be a list of equalities or real-valued \
+functions.\"",2,5,2,30931987016579593859,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6955615852540584`*^9, 3.695561721579703*^9, {3.695561915433282*^9, 
+   3.6955619459033136`*^9}, 3.6955620117843456`*^9, 3.695774501734235*^9, 
+   3.695774557223303*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParametricPlot","exclul",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{FractionBox[\\\"\[Pi]\\\", \\\"2\\\"], \\\"-\\\", RowBox[{\\\"Re\\\", \
+\\\"[\\\", \\\"\[Theta]\\\", \\\"]\\\"}]}], \\\")\\\"}], \\\"-\\\", \
+\\\"0\\\"}], \\\"}\\\"}]\\) must be a list of equalities or real-valued \
+functions.\"",2,5,3,30931987016579593859,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6955615852540584`*^9, 3.695561721579703*^9, {3.695561915433282*^9, 
+   3.6955619459033136`*^9}, 3.6955620117843456`*^9, 3.695774501734235*^9, 
+   3.6957745576168566`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ParametricPlot\\\", \
+\\\"::\\\", \\\"exclul\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,5,4,30931987016579593859,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6955615852540584`*^9, 3.695561721579703*^9, {3.695561915433282*^9, 
+   3.6955619459033136`*^9}, 3.6955620117843456`*^9, 3.695774501734235*^9, 
+   3.6957745576569576`*^9}]
+}, Open  ]]
+},
+WindowSize->{1920, 1007},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1047, 27, 88, "Input"],
+Cell[CellGroupData[{
+Cell[1630, 51, 7623, 168, 126, "Input"],
+Cell[9256, 221, 631, 12, 38, "Message"],
+Cell[9890, 235, 629, 12, 38, "Message"],
+Cell[10522, 249, 631, 12, 38, "Message"],
+Cell[11156, 263, 500, 10, 21, "Message"]
+}, Open  ]]
+}
+]
+*)
+
